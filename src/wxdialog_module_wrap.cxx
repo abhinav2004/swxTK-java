@@ -267,25 +267,33 @@ SWIGEXPORT jlong JNICALL Java_wx_JNI_wxdialog_1moduleJNI_new_1java_1wxdialog(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1ShowModal(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1ShowModal(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   java_wxdialog *arg1 = (java_wxdialog *) 0 ;
+  int result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(java_wxdialog **)&jarg1; 
-  (arg1)->java_ShowModal();
+  result = (int)(arg1)->java_ShowModal();
+  jresult = (jint)result; 
+  return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1Show(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1Show(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   java_wxdialog *arg1 = (java_wxdialog *) 0 ;
+  int result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(java_wxdialog **)&jarg1; 
-  (arg1)->java_Show();
+  result = (int)(arg1)->java_Show();
+  jresult = (jint)result; 
+  return jresult;
 }
 
 
@@ -310,6 +318,17 @@ SWIGEXPORT void JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1Ce
   arg1 = *(java_wxdialog **)&jarg1; 
   arg2 = (int)jarg2; 
   (arg1)->java_Center(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_wx_JNI_wxdialog_1moduleJNI_java_1wxdialog_1java_1Destroy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  java_wxdialog *arg1 = (java_wxdialog *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(java_wxdialog **)&jarg1; 
+  (arg1)->java_Destroy();
 }
 
 

@@ -6,14 +6,15 @@ java_wxdialog::java_wxdialog(java_wxpanel* parent, int id, std::string title, in
 	
 }
 
-void java_wxdialog::java_Show()
+int java_wxdialog::java_Show()
 {
-	wxDialog::Show();
+	std::cout << wxID_OPEN;
+	return wxDialog::Show();
 }
 
-void java_wxdialog::java_ShowModal()
+int java_wxdialog::java_ShowModal()
 {
-	wxDialog::ShowModal();
+	return wxDialog::ShowModal();
 }
 
 void java_wxdialog::java_Center()
@@ -24,4 +25,9 @@ void java_wxdialog::java_Center()
 void java_wxdialog::java_Center(int direction)
 {
 	wxDialog::Center(direction);
+}
+
+void java_wxdialog::java_Destroy()
+{
+	wxDialog::Destroy();
 }
