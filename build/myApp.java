@@ -3,6 +3,8 @@ import wx.*;
 import java.awt.*;
 import java.awt.event.*;
 
+import static wx.wxDefinations.*;
+
 class myApp extends wxApp implements ActionListener
 {
 	private wxFrame frame;
@@ -24,32 +26,32 @@ class myApp extends wxApp implements ActionListener
 
 	@Override
 	public boolean onInit() {
-		frame = new wxFrame(null, -1, "This is a Frame", new Point(0,0), new Dimension(800,600), wxFrame.wxDEFAULT_FRAME_STYLE, "mainFrame");
+		frame = new wxFrame(null, wxID_ANY, "This is a Frame", new Point(0,0), new Dimension(800,600), wxDEFAULT_FRAME_STYLE, "mainFrame");
 		
-		wxPanel panel = new wxPanel(frame, -1);
+		wxPanel panel = new wxPanel(frame, wxID_ANY);
 		
-		dialog = new wxDialog(panel, -1, "About");
+		dialog = new wxDialog(panel, wxID_ANY, "About");
 		
-		button1 = new wxButton(panel, 0, "Button 1", new Point(10,10), new Dimension(100,32), 1, "button");
+		button1 = new wxButton(panel, wxID_ANY, "Button 1", new Point(10,10), new Dimension(100,32), 1, "button");
 		button1.addActionListener(this);
 		
-		System.out.println(button1.toString());
 		
-		button2 = new wxButton(panel, 1, "Button 2", new Point(120,10), new Dimension(100,32), 1, "button 2");
+		
+		button2 = new wxButton(panel, wxID_ANY, "Button 2", new Point(120,10), new Dimension(100,32), 1, "button 2");
 		button2.addActionListener(this);
 		
-		System.out.println(button2.toString());
+		
 		
 		menubar = new wxMenuBar();
 		fileMenu = new wxMenu();
 		helpMenu = new wxMenu();
-		menuitem1 = new wxMenuItem(fileMenu, -1, "&New\tCtrl+N");
+		menuitem1 = new wxMenuItem(fileMenu, wxID_ANY, "&New\tCtrl+N");
 		menuitem1.addActionListener(this);
-		menuitem2 = new wxMenuItem(fileMenu, -1, "&Open\tCtrl+O");
+		menuitem2 = new wxMenuItem(fileMenu, wxID_ANY, "&Open\tCtrl+O");
 		menuitem2.addActionListener(this);
-		menuitem3 = new wxMenuItem(fileMenu, -1, "&Exit\tCtrl+Q");
+		menuitem3 = new wxMenuItem(fileMenu, wxID_ANY, "&Exit\tCtrl+Q");
 		menuitem3.addActionListener(this);
-		about = new wxMenuItem(helpMenu, -1, "&About");
+		about = new wxMenuItem(helpMenu, wxID_ANY, "&About");
 		about.addActionListener(this);
 		fileMenu.append(menuitem1);
 		fileMenu.append(menuitem2);
@@ -61,7 +63,7 @@ class myApp extends wxApp implements ActionListener
 		frame.setMenuBar(menubar);
 		
 		frame.show(true);
-		frame.center(wxFrame.wxOrientation.wxHORIZONTAL);
+		frame.center(wxOrientation.wxHORIZONTAL);
 		
 		return true;
 	}
@@ -75,7 +77,6 @@ class myApp extends wxApp implements ActionListener
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		System.out.println(event.getSource().toString());
 		if(event.getSource() == button1) {
 			System.out.println("Button 1 pressed.");
 		}
@@ -83,7 +84,7 @@ class myApp extends wxApp implements ActionListener
 			System.out.println("Button 2 pressed.");
 		}
 		else if(event.getSource() == menuitem1) {
-			internalframe = new wxFrame(frame, -1, "This is a Internal Frame");
+			internalframe = new wxFrame(frame, wxID_ANY, "This is a Internal Frame");
 			internalframe.show(true);
 		}
 		else if(event.getSource() == menuitem2) {
@@ -93,7 +94,7 @@ class myApp extends wxApp implements ActionListener
 			System.exit(0);
 		}
 		else if(event.getSource() == about) {
-			dialog.show();
+			dialog.showModal();
 		}
 	}
 }

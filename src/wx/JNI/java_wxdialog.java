@@ -39,12 +39,12 @@ public class java_wxdialog {
     this(wxdialog_moduleJNI.new_java_wxdialog(java_wxpanel.getCPtr(parent), parent, id, title, x, y, width, height, style, name), true);
   }
 
-  public void java_ShowModal() {
-    wxdialog_moduleJNI.java_wxdialog_java_ShowModal(swigCPtr, this);
+  public int java_ShowModal() {
+    return wxdialog_moduleJNI.java_wxdialog_java_ShowModal(swigCPtr, this);
   }
 
-  public void java_Show() {
-    wxdialog_moduleJNI.java_wxdialog_java_Show(swigCPtr, this);
+  public int java_Show() {
+    return wxdialog_moduleJNI.java_wxdialog_java_Show(swigCPtr, this);
   }
 
   public void java_Center() {
@@ -53,6 +53,10 @@ public class java_wxdialog {
 
   public void java_Center(int direction) {
     wxdialog_moduleJNI.java_wxdialog_java_Center__SWIG_1(swigCPtr, this, direction);
+  }
+
+  public void java_Destroy() {
+    wxdialog_moduleJNI.java_wxdialog_java_Destroy(swigCPtr, this);
   }
 
 }
