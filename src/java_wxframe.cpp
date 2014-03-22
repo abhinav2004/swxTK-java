@@ -1,7 +1,7 @@
 #include <wx/wx.h>
 #include "../include/java_wxframe.h"
 
-java_wxframe::java_wxframe(java_wxframe* parent, int id, std::string title, int x, int y, int width, int height, long style,std::string name) : wxFrame (parent, id, wxString::FromUTF8(title.c_str()), wxPoint(x,y), wxSize(width, height), wxDEFAULT_FRAME_STYLE, name)
+java_wxframe::java_wxframe(java_wxwindow* parent, int id, std::string title, int x, int y, int width, int height, long style,std::string name) : wxFrame (parent, id, wxString::FromUTF8(title.c_str()), wxPoint(x,y), wxSize(width, height), wxDEFAULT_FRAME_STYLE, name)
 {
 	
 }

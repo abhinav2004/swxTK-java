@@ -8,6 +8,7 @@ from scripts import make_wxpanel as wxPanel
 from scripts import make_wxbutton as wxButton
 from scripts import make_wxmenubar as wxMenuBar
 from scripts import make_wxdialog as wxDialog
+from scripts import make_wxwindow as wxWindow
 
 def main(args):
 	if(len(args) is not 1):
@@ -36,15 +37,20 @@ def main(args):
 			elif args[x] == "wxDialog":
 				wxDialog.make_natives()
 				wxDialog.make_java()
+			elif args[x] == "wxWindow":
+				wxWindow.make_natives()
+				wxWindow.make_java()
 	else:
 		wxApp.make_natives()
 		wxButton.make_natives()
+		wxWindow.make_natives()
 		wxPanel.make_natives()
 		wxFrame.make_natives()
 		wxMenuBar.make_natives()
 		wxDialog.make_natives()
 		wxApp.make_java()
 		wxMenuBar.make_java()
+		wxWindow.make_java()
 		wxFrame.make_java()
 		wxPanel.make_java()
 		wxDialog.make_java()

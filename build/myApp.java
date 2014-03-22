@@ -22,15 +22,19 @@ class myApp extends wxApp implements ActionListener
 	private wxMenuItem menuitem3;
 	private wxMenuItem about;
 	
+	private wxPanel panel;
+	
 	String args[];
 
 	@Override
 	public boolean onInit() {
 		frame = new wxFrame(null, wxID_ANY, "This is a Frame", new Point(0,0), new Dimension(800,600), wxDEFAULT_FRAME_STYLE, "mainFrame");
 		
-		wxPanel panel = new wxPanel(frame, wxID_ANY);
+		panel = new wxPanel(frame, wxID_ANY);
+		
 		
 		dialog = new wxDialog(panel, wxID_ANY, "About");
+		//wxPanel dialogPanel = new wxPanel(dialog, wxID_ANY);
 		
 		button1 = new wxButton(panel, wxID_ANY, "Button 1", new Point(10,10), new Dimension(100,32), 1, "button");
 		button1.addActionListener(this);

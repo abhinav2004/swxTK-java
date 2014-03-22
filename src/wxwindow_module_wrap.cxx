@@ -215,14 +215,14 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 
 
 	#include <wx/wx.h>
-	#include "../include/java_wxpanel.h"
+	#include "../include/java_wxwindow.h"
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-SWIGEXPORT jlong JNICALL Java_wx_JNI_wxpanel_1moduleJNI_new_1java_1wxpanel(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_wx_JNI_wxwindow_1moduleJNI_new_1java_1wxwindow_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   java_wxwindow *arg1 = (java_wxwindow *) 0 ;
   int arg2 ;
@@ -232,7 +232,7 @@ SWIGEXPORT jlong JNICALL Java_wx_JNI_wxpanel_1moduleJNI_new_1java_1wxpanel(JNIEn
   int arg6 ;
   long arg7 ;
   std::string arg8 ;
-  java_wxpanel *result = 0 ;
+  java_wxwindow *result = 0 ;
   
   (void)jenv;
   (void)jcls;
@@ -252,18 +252,30 @@ SWIGEXPORT jlong JNICALL Java_wx_JNI_wxpanel_1moduleJNI_new_1java_1wxpanel(JNIEn
   if (!arg8_pstr) return 0;
   (&arg8)->assign(arg8_pstr);
   jenv->ReleaseStringUTFChars(jarg8, arg8_pstr); 
-  result = (java_wxpanel *)new java_wxpanel(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
-  *(java_wxpanel **)&jresult = result; 
+  result = (java_wxwindow *)new java_wxwindow(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+  *(java_wxwindow **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_wx_JNI_wxpanel_1moduleJNI_delete_1java_1wxpanel(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  java_wxpanel *arg1 = (java_wxpanel *) 0 ;
+SWIGEXPORT jlong JNICALL Java_wx_JNI_wxwindow_1moduleJNI_new_1java_1wxwindow_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  java_wxwindow *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(java_wxpanel **)&jarg1; 
+  result = (java_wxwindow *)new java_wxwindow();
+  *(java_wxwindow **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_wx_JNI_wxwindow_1moduleJNI_delete_1java_1wxwindow(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  java_wxwindow *arg1 = (java_wxwindow *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(java_wxwindow **)&jarg1; 
   delete arg1;
 }
 

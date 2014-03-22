@@ -8,16 +8,16 @@
 
 package wx.JNI;
 
-public class java_wxpanel {
+public class java_wxwindow {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
-  protected java_wxpanel(long cPtr, boolean cMemoryOwn) {
+  protected java_wxwindow(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(java_wxpanel obj) {
+  protected static long getCPtr(java_wxwindow obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -29,14 +29,18 @@ public class java_wxpanel {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        wxbutton_moduleJNI.delete_java_wxpanel(swigCPtr);
+        wxwindow_moduleJNI.delete_java_wxwindow(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public java_wxpanel(SWIGTYPE_p_java_wxwindow parent, int id, int x, int y, int width, int height, int style, String name) {
-    this(wxbutton_moduleJNI.new_java_wxpanel(SWIGTYPE_p_java_wxwindow.getCPtr(parent), id, x, y, width, height, style, name), true);
+  public java_wxwindow(java_wxwindow parent, int id, int x, int y, int width, int height, int style, String name) {
+    this(wxwindow_moduleJNI.new_java_wxwindow__SWIG_0(java_wxwindow.getCPtr(parent), parent, id, x, y, width, height, style, name), true);
+  }
+
+  public java_wxwindow() {
+    this(wxwindow_moduleJNI.new_java_wxwindow__SWIG_1(), true);
   }
 
 }

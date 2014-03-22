@@ -498,9 +498,9 @@ void SwigDirector_java_wxbutton::swig_connect_director(JNIEnv *jenv, jobject jse
 extern "C" {
 #endif
 
-SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxframe(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jint jarg8, jstring jarg9) {
+SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxframe(JNIEnv *jenv, jclass jcls, jlong jarg1, jint jarg2, jstring jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jint jarg8, jstring jarg9) {
   jlong jresult = 0 ;
-  java_wxframe *arg1 = (java_wxframe *) 0 ;
+  java_wxwindow *arg1 = (java_wxwindow *) 0 ;
   int arg2 ;
   std::string arg3 ;
   int arg4 ;
@@ -513,8 +513,7 @@ SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxframe(JNIE
   
   (void)jenv;
   (void)jcls;
-  (void)jarg1_;
-  arg1 = *(java_wxframe **)&jarg1; 
+  arg1 = *(java_wxwindow **)&jarg1; 
   arg2 = (int)jarg2; 
   if(!jarg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
@@ -603,9 +602,9 @@ SWIGEXPORT void JNICALL Java_wx_JNI_wxbutton_1moduleJNI_delete_1java_1wxframe(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxpanel(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxpanel(JNIEnv *jenv, jclass jcls, jlong jarg1, jint jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jint jarg7, jstring jarg8) {
   jlong jresult = 0 ;
-  java_wxframe *arg1 = (java_wxframe *) 0 ;
+  java_wxwindow *arg1 = (java_wxwindow *) 0 ;
   int arg2 ;
   int arg3 ;
   int arg4 ;
@@ -617,8 +616,7 @@ SWIGEXPORT jlong JNICALL Java_wx_JNI_wxbutton_1moduleJNI_new_1java_1wxpanel(JNIE
   
   (void)jenv;
   (void)jcls;
-  (void)jarg1_;
-  arg1 = *(java_wxframe **)&jarg1; 
+  arg1 = *(java_wxwindow **)&jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   arg4 = (int)jarg4; 

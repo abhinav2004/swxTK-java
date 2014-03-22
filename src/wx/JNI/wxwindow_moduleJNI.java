@@ -8,7 +8,8 @@
 
 package wx.JNI;
 
-public class wxpanel_moduleJNI {
-  public final static native long new_java_wxpanel(long jarg1, java_wxwindow jarg1_, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, String jarg8);
-  public final static native void delete_java_wxpanel(long jarg1);
+public class wxwindow_moduleJNI {
+  public final static native long new_java_wxwindow__SWIG_0(long jarg1, java_wxwindow jarg1_, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, String jarg8);
+  public final static native long new_java_wxwindow__SWIG_1();
+  public final static native void delete_java_wxwindow(long jarg1);
 }

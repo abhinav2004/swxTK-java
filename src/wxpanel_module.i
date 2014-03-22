@@ -3,8 +3,8 @@
 %include "enums.swg"
 %javaconst(1);
 %apply char **STRING_ARRAY { char *argv[] }
-%import(module="wxmenubar_module") "../include/java_wxmenubar.h"
-%import(module="wxframe_module") "../include/java_wxframe.h"
+%import(module="wxwindow_module") "../include/java_wxwindow.h"
+%typemap(javabase) java_wxpanel "wx.wxWindow";
 #pragma SWIG nowarn=401
 %module wxpanel_module
 %{
