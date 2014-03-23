@@ -8,7 +8,7 @@
 
 package wx.JNI;
 
-public class java_wxpanel {
+public class java_wxpanel extends wx.wxWindow {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
@@ -29,14 +29,14 @@ public class java_wxpanel {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        wxbutton_moduleJNI.delete_java_wxpanel(swigCPtr);
+        wxpanel_moduleJNI.delete_java_wxpanel(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public java_wxpanel(SWIGTYPE_p_java_wxwindow parent, int id, int x, int y, int width, int height, int style, String name) {
-    this(wxbutton_moduleJNI.new_java_wxpanel(SWIGTYPE_p_java_wxwindow.getCPtr(parent), id, x, y, width, height, style, name), true);
+  public java_wxpanel(java_wxwindow parent, int id, int x, int y, int width, int height, int style, String name) {
+    this(wxpanel_moduleJNI.new_java_wxpanel(java_wxwindow.getCPtr(parent), parent, id, x, y, width, height, style, name), true);
   }
 
 }

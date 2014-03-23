@@ -7,7 +7,7 @@ import wx.JNI.*;
 
 import static wx.wxDefinations.*;
 
-public class wxWindow extends java_wxwindow{
+public class wxWindow extends java_wxwindow {
 
 	static {
 		System.loadLibrary("wxwindow");

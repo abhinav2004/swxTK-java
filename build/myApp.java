@@ -1,4 +1,5 @@
 import wx.*;
+import wx.JNI.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -30,7 +31,7 @@ class myApp extends wxApp implements ActionListener
 	public boolean onInit() {
 		frame = new wxFrame(null, wxID_ANY, "This is a Frame", new Point(0,0), new Dimension(800,600), wxDEFAULT_FRAME_STYLE, "mainFrame");
 		
-		panel = new wxPanel(frame, wxID_ANY);
+		panel = new wxPanel(new java_wxwindow(), wxID_ANY);
 		
 		
 		dialog = new wxDialog(panel, wxID_ANY, "About");

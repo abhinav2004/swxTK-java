@@ -3,6 +3,7 @@
 %include "enums.swg"
 %javaconst(1);
 %apply char **STRING_ARRAY { char *argv[] }
+%import(module="wxframe_module") "../include/java_wxframe.h"
 #pragma SWIG nowarn=401
 %module(directors="1")  wxbutton_module
 %{
@@ -10,7 +11,6 @@
 	#include "../include/java_wxbutton.h"
 %}
 %feature("director") java_wxbutton;
-%include "../include/java_wxframe.h"
 %include "../include/java_wxpanel.h"
 %include "../include/java_wxbutton.h"
 
