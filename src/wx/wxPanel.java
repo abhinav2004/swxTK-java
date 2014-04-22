@@ -11,11 +11,11 @@ public class wxPanel extends java_wxpanel{
 		System.loadLibrary("wxpanel");
 	}
 
-	public wxPanel(java_wxwindow parent, int id, Point location, Dimension size, int style, String name) {
+	public wxPanel(java_wxframe parent, int id, Point location, Dimension size, int style, String name) {
 		super(parent, id, (int) location.getX(), (int) location.getY(), (int) size.getWidth(), (int) size.getHeight(), style, name);
 	}
 	
-	public wxPanel(java_wxwindow parent, int id) {
+	public wxPanel(java_wxframe parent, int id) {
 		super(parent, id, 0, 0, 400, 400, 0, "default name");
 	}
 }

@@ -15,11 +15,11 @@ public class wxFrame extends java_wxframe{
 
 	
 	
-	public wxFrame(wxWindow parent, int id, String title, Point location, Dimension size, int style, String name) {
+	public wxFrame(java_wxwindow parent, int id, String title, Point location, Dimension size, int style, String name) {
 		super(parent, id, title, (int) location.getX(), (int) location.getY(), (int) size.getWidth(), (int) size.getHeight(), style, name);
 	}
 	
-	public wxFrame(wxWindow parent, int id, String title) {
+	public wxFrame(java_wxwindow parent, int id, String title) {
 		super(parent, id, title, 0, 0, 400, 400, wxDEFAULT_FRAME_STYLE, "default name");
 	}
 	

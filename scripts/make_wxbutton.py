@@ -3,7 +3,7 @@ import sys
 import subprocess
 
 JAVA_HOME = os.environ['JAVA_HOME']
-CXX = "g++"
+CXX = "g++ -g"
 WXWIDGETS_CXXOP = "`wx-config --cppflags` `wx-config --libs` "
 CXXOP = " -pipe -c -shared -fPIC " + WXWIDGETS_CXXOP + "-L./build/natives -I"+JAVA_HOME+"/include/ -I"+JAVA_HOME+"/include/linux/ "
 SWIG = "swig -c++ -java "

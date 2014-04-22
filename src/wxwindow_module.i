@@ -10,3 +10,8 @@
 	#include "../include/java_wxwindow.h"
 %}
 %include "../include/java_wxwindow.h"
+%pragma(java) jniclasscode=%{
+	static {
+		System.loadLibrary("wxwindow");
+	}
+%}

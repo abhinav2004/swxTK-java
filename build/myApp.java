@@ -29,9 +29,9 @@ class myApp extends wxApp implements ActionListener
 
 	@Override
 	public boolean onInit() {
-		frame = new wxFrame(null, wxID_ANY, "This is a Frame", new Point(0,0), new Dimension(800,600), wxDEFAULT_FRAME_STYLE, "mainFrame");
+		frame = new wxFrame(frame, wxID_ANY, "This is a Frame", new Point(0,0), new Dimension(800,600), wxDEFAULT_FRAME_STYLE, "mainFrame");
 		
-		panel = new wxPanel(new java_wxwindow(), wxID_ANY);
+		panel = new wxPanel(frame, wxID_ANY);
 		
 		
 		dialog = new wxDialog(panel, wxID_ANY, "About");
@@ -82,13 +82,13 @@ class myApp extends wxApp implements ActionListener
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		if(event.getSource() == button1) {
+		/*if(event.getSource() == button1) {
 			System.out.println("Button 1 pressed.");
 		}
 		else if(event.getSource() == button2) {
 			System.out.println("Button 2 pressed.");
 		}
-		else if(event.getSource() == menuitem1) {
+		else */if(event.getSource() == menuitem1) {
 			internalframe = new wxFrame(frame, wxID_ANY, "This is a Internal Frame");
 			internalframe.show(true);
 		}

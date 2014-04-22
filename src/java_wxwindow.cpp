@@ -1,4 +1,4 @@
-#include <wx/wx.h>
+#include <wx/window.h>
 #include "../include/java_wxwindow.h"
 
 java_wxwindow::java_wxwindow() : wxWindow()
